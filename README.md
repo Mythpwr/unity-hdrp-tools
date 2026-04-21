@@ -1,14 +1,14 @@
-UV Light Effect – HDRP Decal Shader (Unity)
+#UV Light Effect – HDRP Decal Shader (Unity)
 Reveals a texture only where a spotlight hits — works on any surface without modifying existing materials.
 🎬 Watch on YouTube: youtube.com/...
 
-Requirements
+#Requirements
 
 Unity HDRP
 Any Unity version supporting Decal Projector
 
 
-Setup
+#Setup
 1. HLSL File
 Unity does not support creating HLSL files directly. Open your project folder in File Explorer, create a new text file and rename it to UVReveal.hlsl (make sure file extensions are visible in Explorer). Paste the HLSL code inside.
 2. Shader Graph
@@ -31,19 +31,19 @@ Add the UVLightController script to your spotlight object in the scene. The scri
 The script uses SetGlobalVector / SetGlobalFloat, meaning all materials using these shader variables in the scene are updated automatically with a single light source.
 
 
-Notes
+#Notes
 
 OnValidate was used during development for testing in the editor. Once you've set everything up, replace it with Update to run during gameplay (runtime).
 
 
-How does it work?
+#How does it work?
 Built with AI assistance — paste the HLSL code into any AI (ChatGPT, Claude, etc.) and ask how it works or how to modify it.
 
-Credits & Resources
+#Credits & Resources
 
 Textures used in the demo: 
 <a href="https://www.freepik.com/free-vector/scary-blood-human-hand-blot-white-background-realistic-vector-illustration_37917104.htm#fromView=search&page=1&position=0&uuid=6fe9eee1-a19c-41b4-ad21-3fccbd2888c2&query=ghost+hand">Image by macrovector on Freepik</a>
 <a href="https://www.freepik.com/free-vector/flat-design-bloody-handprint-background_66188147.htm#fromView=search&page=1&position=2&uuid=7b21e5f2-03a2-48a8-81f7-b5287074f38c&query=scary+print">Image by freepik</a>
 
-Disclaimer
+#Disclaimer
 This project may not be the most optimal solution for a UV light effect, but it might still be useful or serve as a starting point to build upon.
