@@ -1,6 +1,6 @@
 # UV Light Effect – HDRP Decal Shader (Unity)
 Reveals a texture only where a spotlight hits — works on any surface without modifying existing materials.
-[![UVReveal Demo](assets/uvreveal-demo.gif)](https://youtube.com/watch?v=...)
+[![UV Light Demo](assets/uv-light-demo.gif)](https://youtube.com/watch?v=...)
 
 
 🎬 Watch on YouTube: youtube.com/...
