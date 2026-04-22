@@ -1,9 +1,9 @@
 # UV Light Reveal – HDRP Decal Shader (Unity)
 Reveals a texture only where a spotlight hits — works on any surface without modifying existing materials.
-[![UV Light Demo](UV-Light-Reveal/assets/uv-light-demo.gif)](https://youtu.be/0uOcl-USs-g)
+[![UV Light Demo](UV-Light-Reveal/assets/uv-light-demo.gif)](https://www.youtube.com/watch?v=Q_yG5qkPpzU)
 
 
-🎬 Watch on YouTube: youtube.com/...
+🎬 Watch on YouTube:(https://www.youtube.com/watch?v=Q_yG5qkPpzU)
 
 # Requirements
 
@@ -18,8 +18,9 @@ Unity does not support creating HLSL files directly. Open your project folder in
 Create an HDRP Decal Shader Graph, name it UVReveal. Inside the Shader Graph:
 
 Add a Custom Function node → set Type to File, set Name to the function name without the _float suffix (e.g. UVReveal), and assign your UVReveal.hlsl to the Source field
-Add a Position (Absolute World) node → connect to the Custom Function's WorldPos input
-Sample your texture, multiply RGB and Alpha with the mask output → connect to Albedo and Emission
+Add a Position (Absolute World) node → connect to the Custom Function's WorldPos input. 
+### Note: I named the input WorldPos in the video by mistake — rename it to AbsoluteWorldPos to match the HLSL parameter.
+
 
 ## 3. Material
 Create a material from the UVReveal shader. Assign your texture and adjust the relevant fields on the material.
@@ -33,9 +34,7 @@ Add the UVLightController script to your spotlight object in the scene. The scri
 
 The script uses SetGlobalVector / SetGlobalFloat, meaning all materials using these shader variables in the scene are updated automatically with a single light source.
 
-
-# Notes
-
+### Notes
 OnValidate was used during development for testing in the editor. Once you've set everything up, replace it with Update to run during gameplay (runtime).
 
 
